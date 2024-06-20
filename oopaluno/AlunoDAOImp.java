@@ -36,8 +36,6 @@ public class AlunoDAOImp implements AlunoDAO {
             ps.setDate(4, Date.valueOf(a.getNascimento()));
 
             ps.executeUpdate();
-            con.close();
-            ps.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -68,9 +66,6 @@ public class AlunoDAOImp implements AlunoDAO {
                 a.setNascimento(rs.getDate("nascimento").toLocalDate());
                 lista.add(a);
             }
-
-            ps.close();
-            con.close();
             
             return lista;
         } catch (Exception e) { 

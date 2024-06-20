@@ -38,6 +38,9 @@ public class AlunoControl {
     }
 
     public void pesquisar() {
+        lista.clear();
+        lista.addAll(dao.pesquisar(nome.get()));
+
         for (Aluno c : lista) { 
             if (c.getNome().contains( nome.get() )) { 
                 setEntity(c);
