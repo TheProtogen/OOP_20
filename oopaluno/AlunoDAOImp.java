@@ -33,7 +33,7 @@ public class AlunoDAOImp implements AlunoDAO {
             ps.setLong(1, a.getId());
             ps.setString(2, a.getRa());
             ps.setString(3, a.getNome());
-            ps.setDate(4, Date.valueOf(a.getNascimento()));
+            ps.setDate(4, java.sql.Date.valueOf(a.getNascimento()));
 
             ps.executeUpdate();
 
