@@ -1,1 +1,1 @@
-localhost connection rules
+localhost connection reigns
